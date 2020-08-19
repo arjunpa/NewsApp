@@ -10,7 +10,7 @@ import Foundation
 
 protocol ArticleListRepositoryInterface {
     
-    func fetchArticles(with request: Requestable, completion: @escaping (Result<ArticleListResponse, Error>) -> Void)
+    func fetchArticles(completion: @escaping (Result<ArticleListResponse, Error>) -> Void)
 }
 
 final class ArticleListRepository: ArticleListRepositoryInterface {
@@ -21,7 +21,14 @@ final class ArticleListRepository: ArticleListRepositoryInterface {
         self.apiService = apiService
     }
     
-    func fetchArticles(with request: Requestable, completion: @escaping (Result<ArticleListResponse, Error>) -> Void) {
+    func fetchArticles(completion: @escaping (Result<ArticleListResponse, Error>) -> Void) {
+        
+        let request = Request(url: APIEndPoint.photosAPI,
+                              method: .get,
+                              parameters: nil,
+                              headers: nil,
+                              encoding: GetRequestEncoding())
+        
         self.apiService.request(for: request) { (result: Result<APIHTTPDecodableResponse<ArticleListResponse>, Error>) in
             switch result {
             case .success(let response):
