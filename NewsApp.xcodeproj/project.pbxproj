@@ -29,6 +29,8 @@
 		C2EC67EE24ED0E8B007FEF40 /* SessionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67ED24ED0E8B007FEF40 /* SessionContext.swift */; };
 		C2EC67F024ED13CD007FEF40 /* ArticleListRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67EF24ED13CD007FEF40 /* ArticleListRepositoryInterface.swift */; };
 		C2EC67F224ED1497007FEF40 /* ArticleListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67F124ED1497007FEF40 /* ArticleListResponse.swift */; };
+		C2EC67F424ED1E06007FEF40 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67F324ED1E06007FEF40 /* APIEndpoint.swift */; };
+		C2EC67FE24ED6DE2007FEF40 /* KeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		C2EC67ED24ED0E8B007FEF40 /* SessionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionContext.swift; sourceTree = "<group>"; };
 		C2EC67EF24ED13CD007FEF40 /* ArticleListRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRepositoryInterface.swift; sourceTree = "<group>"; };
 		C2EC67F124ED1497007FEF40 /* ArticleListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListResponse.swift; sourceTree = "<group>"; };
+		C2EC67F324ED1E06007FEF40 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				C2EC67E924ECFEF9007FEF40 /* APIServiceError.swift */,
+				C2EC67F324ED1E06007FEF40 /* APIEndpoint.swift */,
 				C2EC67EB24ED0D45007FEF40 /* APIService.swift */,
 				C2EC67DD24EBB3C8007FEF40 /* APIHTTPDecodableResponse.swift */,
 				C2EC67E124ECFC97007FEF40 /* Request.swift */,
@@ -164,6 +169,7 @@
 			children = (
 				C2EC67D924EB9984007FEF40 /* UITableViewCell+ReuseIdentifier.swift */,
 				C2EC67DF24ECFC6F007FEF40 /* URLRequest+RequestMethod.swift */,
+				C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				C2EC67B824EB96C1007FEF40 /* NewsApp.xcdatamodeld in Sources */,
 				C2EC67DC24EBB3B4007FEF40 /* APIServiceInterface.swift in Sources */,
 				C2EC67F024ED13CD007FEF40 /* ArticleListRepositoryInterface.swift in Sources */,
+				C2EC67F424ED1E06007FEF40 /* APIEndpoint.swift in Sources */,
 				C2EC67E024ECFC6F007FEF40 /* URLRequest+RequestMethod.swift in Sources */,
 				C2EC67E724ECFD3A007FEF40 /* RequestURLEncoding.swift in Sources */,
 				C2EC67DE24EBB3C8007FEF40 /* APIHTTPDecodableResponse.swift in Sources */,
@@ -285,6 +292,7 @@
 				C2EC67F224ED1497007FEF40 /* ArticleListResponse.swift in Sources */,
 				C2EC67E224ECFC97007FEF40 /* Request.swift in Sources */,
 				C2EC67D724EB9932007FEF40 /* URLFormable.swift in Sources */,
+				C2EC67FE24ED6DE2007FEF40 /* KeyedDecodingContainer.swift in Sources */,
 				C2EC67DA24EB9984007FEF40 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				C2EC67E824ECFD3A007FEF40 /* RequestJSONEncoding.swift in Sources */,
 			);
