@@ -15,10 +15,12 @@ protocol ArticleViewModelInterface {
 
 final class ArticleViewModel: ArticleViewModelInterface {
     
+    let article: Article
     let title: String
     let description: String
     
     init(article: Article) {
+        self.article = article
         self.title = article.title
         self.description = article.description
     }

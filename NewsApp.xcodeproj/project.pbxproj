@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20002B324EE442900295FAB /* UIStoryboard+StoryboardAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20002B224EE442900295FAB /* UIStoryboard+StoryboardAdditions.swift */; };
+		C20002B524EE449400295FAB /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20002B424EE449400295FAB /* StoryboardInstantiable.swift */; };
+		C20002BB24EE46D100295FAB /* ArticleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20002B924EE46D100295FAB /* ArticleListTableViewCell.swift */; };
+		C20002BC24EE46D100295FAB /* ArticleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20002BA24EE46D100295FAB /* ArticleListTableViewCell.xib */; };
+		C20002BE24EE583C00295FAB /* String+DateFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20002BD24EE583C00295FAB /* String+DateFormats.swift */; };
 		C2EC67AE24EB96C1007FEF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67AD24EB96C1007FEF40 /* AppDelegate.swift */; };
 		C2EC67B224EB96C1007FEF40 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67B124EB96C1007FEF40 /* ArticleListViewController.swift */; };
 		C2EC67B524EB96C1007FEF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2EC67B324EB96C1007FEF40 /* Main.storyboard */; };
@@ -30,7 +35,7 @@
 		C2EC67F024ED13CD007FEF40 /* ArticleListRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67EF24ED13CD007FEF40 /* ArticleListRepositoryInterface.swift */; };
 		C2EC67F224ED1497007FEF40 /* ArticleListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67F124ED1497007FEF40 /* ArticleListResponse.swift */; };
 		C2EC67F424ED1E06007FEF40 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67F324ED1E06007FEF40 /* APIEndpoint.swift */; };
-		C2EC67FE24ED6DE2007FEF40 /* KeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer.swift */; };
+		C2EC67FE24ED6DE2007FEF40 /* KeyedDecodingContainer+URLDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer+URLDecoding.swift */; };
 		C2F3776F24EDB0690008AE52 /* DiskURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3776D24EDB0690008AE52 /* DiskURLCache.swift */; };
 		C2F3777024EDB0690008AE52 /* RequestURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */; };
 		C2F3777224EDB08C0008AE52 /* URLCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3777124EDB08C0008AE52 /* URLCacheable.swift */; };
@@ -50,6 +55,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C20002B224EE442900295FAB /* UIStoryboard+StoryboardAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+StoryboardAdditions.swift"; sourceTree = "<group>"; };
+		C20002B424EE449400295FAB /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		C20002B924EE46D100295FAB /* ArticleListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewCell.swift; sourceTree = "<group>"; };
+		C20002BA24EE46D100295FAB /* ArticleListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleListTableViewCell.xib; sourceTree = "<group>"; };
+		C20002BD24EE583C00295FAB /* String+DateFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormats.swift"; sourceTree = "<group>"; };
 		C2EC67AA24EB96C1007FEF40 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EC67AD24EB96C1007FEF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EC67B124EB96C1007FEF40 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +87,7 @@
 		C2EC67EF24ED13CD007FEF40 /* ArticleListRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRepositoryInterface.swift; sourceTree = "<group>"; };
 		C2EC67F124ED1497007FEF40 /* ArticleListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListResponse.swift; sourceTree = "<group>"; };
 		C2EC67F324ED1E06007FEF40 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
-		C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer+URLDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+URLDecoding.swift"; sourceTree = "<group>"; };
 		C2F3776D24EDB0690008AE52 /* DiskURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskURLCache.swift; sourceTree = "<group>"; };
 		C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestURLCache.swift; sourceTree = "<group>"; };
 		C2F3777124EDB08C0008AE52 /* URLCacheable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCacheable.swift; sourceTree = "<group>"; };
@@ -104,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C20002B624EE468200295FAB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C20002B924EE46D100295FAB /* ArticleListTableViewCell.swift */,
+				C20002BA24EE46D100295FAB /* ArticleListTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		C2EC67A124EB96C1007FEF40 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +144,7 @@
 		C2EC67AC24EB96C1007FEF40 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				C20002B624EE468200295FAB /* Cells */,
 				C2F3777424EE376C0008AE52 /* View Models */,
 				C2F3777324EE375E0008AE52 /* Models */,
 				C2EC67D824EB9964007FEF40 /* Extensions */,
@@ -176,6 +196,7 @@
 				C2EC67ED24ED0E8B007FEF40 /* SessionContext.swift */,
 				C2F3777124EDB08C0008AE52 /* URLCacheable.swift */,
 				C2EC67E324ECFCBC007FEF40 /* RequestEncoding.swift */,
+				C20002B424EE449400295FAB /* StoryboardInstantiable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -186,7 +207,9 @@
 				C2F3777924EE3CC60008AE52 /* CacheURLResponse+Decodable.swift */,
 				C2EC67D924EB9984007FEF40 /* UITableViewCell+ReuseIdentifier.swift */,
 				C2EC67DF24ECFC6F007FEF40 /* URLRequest+RequestMethod.swift */,
-				C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer.swift */,
+				C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer+URLDecoding.swift */,
+				C20002B224EE442900295FAB /* UIStoryboard+StoryboardAdditions.swift */,
+				C20002BD24EE583C00295FAB /* String+DateFormats.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20002BC24EE46D100295FAB /* ArticleListTableViewCell.xib in Resources */,
 				C2EC67BD24EB96C2007FEF40 /* LaunchScreen.storyboard in Resources */,
 				C2EC67BA24EB96C2007FEF40 /* Assets.xcassets in Resources */,
 				C2EC67B524EB96C1007FEF40 /* Main.storyboard in Resources */,
@@ -311,6 +335,7 @@
 			files = (
 				C2EC67B224EB96C1007FEF40 /* ArticleListViewController.swift in Sources */,
 				C2F3777624EE37890008AE52 /* ArticleListViewModel.swift in Sources */,
+				C20002B324EE442900295FAB /* UIStoryboard+StoryboardAdditions.swift in Sources */,
 				C2F3777A24EE3CC60008AE52 /* CacheURLResponse+Decodable.swift in Sources */,
 				C2EC67EC24ED0D45007FEF40 /* APIService.swift in Sources */,
 				C2F3777824EE382F0008AE52 /* ArticleViewModel.swift in Sources */,
@@ -324,15 +349,18 @@
 				C2F3777024EDB0690008AE52 /* RequestURLCache.swift in Sources */,
 				C2EC67F024ED13CD007FEF40 /* ArticleListRepositoryInterface.swift in Sources */,
 				C2EC67F424ED1E06007FEF40 /* APIEndpoint.swift in Sources */,
+				C20002BE24EE583C00295FAB /* String+DateFormats.swift in Sources */,
 				C2EC67E024ECFC6F007FEF40 /* URLRequest+RequestMethod.swift in Sources */,
 				C2EC67E724ECFD3A007FEF40 /* RequestURLEncoding.swift in Sources */,
+				C20002B524EE449400295FAB /* StoryboardInstantiable.swift in Sources */,
 				C2EC67DE24EBB3C8007FEF40 /* APIHTTPDecodableResponse.swift in Sources */,
+				C20002BB24EE46D100295FAB /* ArticleListTableViewCell.swift in Sources */,
 				C2EC67E424ECFCBC007FEF40 /* RequestEncoding.swift in Sources */,
 				C2EC67EA24ECFEF9007FEF40 /* APIServiceError.swift in Sources */,
 				C2EC67F224ED1497007FEF40 /* ArticleListResponse.swift in Sources */,
 				C2EC67E224ECFC97007FEF40 /* Request.swift in Sources */,
 				C2EC67D724EB9932007FEF40 /* URLFormable.swift in Sources */,
-				C2EC67FE24ED6DE2007FEF40 /* KeyedDecodingContainer.swift in Sources */,
+				C2EC67FE24ED6DE2007FEF40 /* KeyedDecodingContainer+URLDecoding.swift in Sources */,
 				C2EC67DA24EB9984007FEF40 /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				C2EC67E824ECFD3A007FEF40 /* RequestJSONEncoding.swift in Sources */,
 			);

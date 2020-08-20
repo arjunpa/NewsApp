@@ -38,6 +38,7 @@ struct Article: Decodable {
         case description
         case articleURL = "url"
         case imageURL = "urlToImage"
+        case publishDate = "publishedAt"
     }
     
     let author: String?
@@ -45,6 +46,7 @@ struct Article: Decodable {
     let description: String
     let imageURL: URL?
     let articleURL: URL?
+    let publishDate: Date
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -53,5 +55,6 @@ struct Article: Decodable {
         self.description = try container.decode(String.self, forKey: .description)
         self.imageURL = try container.decodeURLByAddingPercentEncoding(URL.self, forKey: .imageURL)
         self.articleURL = try container.decodeURLByAddingPercentEncoding(URL.self, forKey: .articleURL)
+        self.publishDate = (try? container.decode(String.self, forKey: .publishDate).formatToDate(with: .zulu)) ?? Date()
     }
 }

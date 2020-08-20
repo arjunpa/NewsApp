@@ -8,10 +8,16 @@
 
 import Foundation
 
+enum ArticleListViewSortOrder {
+    case ascending
+    case descending
+}
+
 protocol ArticleListViewModelInterface {
     var numberOfRows: Int { get }
     func itemAtIndex(_ index: Int) -> ArticleViewModelInterface
     func fetchArticles()
+    func sortArticlesBy(_ order: ArticleListViewSortOrder)
 }
 
 
@@ -41,6 +47,15 @@ final class ArticleListViewModel: ArticleListViewModelInterface {
                 self?.dispatchError(error)
             }
         }
+    }
+    
+    func sortArticlesBy(_ order: ArticleListViewSortOrder) {
+        let sortFunction: (ArticleViewModel, ArticleViewModel) -> Bool = { first, second in
+            return order == .ascending ? first.article.publishDate < second.article.publishDate
+                                       : first.article.publishDate > second.article.publishDate
+        }
+        self.articleViewModels.sort(by: sortFunction)
+        self.delegate?.updateView()
     }
     
     var numberOfRows: Int {
