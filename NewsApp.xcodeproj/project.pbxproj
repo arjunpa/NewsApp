@@ -31,6 +31,9 @@
 		C2EC67F224ED1497007FEF40 /* ArticleListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67F124ED1497007FEF40 /* ArticleListResponse.swift */; };
 		C2EC67F424ED1E06007FEF40 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67F324ED1E06007FEF40 /* APIEndpoint.swift */; };
 		C2EC67FE24ED6DE2007FEF40 /* KeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer.swift */; };
+		C2F3776F24EDB0690008AE52 /* DiskURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3776D24EDB0690008AE52 /* DiskURLCache.swift */; };
+		C2F3777024EDB0690008AE52 /* RequestURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */; };
+		C2F3777224EDB08C0008AE52 /* URLCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3777124EDB08C0008AE52 /* URLCacheable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		C2EC67F124ED1497007FEF40 /* ArticleListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListResponse.swift; sourceTree = "<group>"; };
 		C2EC67F324ED1E06007FEF40 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		C2F3776D24EDB0690008AE52 /* DiskURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskURLCache.swift; sourceTree = "<group>"; };
+		C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestURLCache.swift; sourceTree = "<group>"; };
+		C2F3777124EDB08C0008AE52 /* URLCacheable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCacheable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,8 @@
 				C2EC67E624ECFD3A007FEF40 /* RequestJSONEncoding.swift */,
 				C2EC67EF24ED13CD007FEF40 /* ArticleListRepositoryInterface.swift */,
 				C2EC67F124ED1497007FEF40 /* ArticleListResponse.swift */,
+				C2F3776D24EDB0690008AE52 /* DiskURLCache.swift */,
+				C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 				C2EC67D624EB9932007FEF40 /* URLFormable.swift */,
 				C2EC67DB24EBB3B4007FEF40 /* APIServiceInterface.swift */,
 				C2EC67ED24ED0E8B007FEF40 /* SessionContext.swift */,
+				C2F3777124EDB08C0008AE52 /* URLCacheable.swift */,
 				C2EC67E324ECFCBC007FEF40 /* RequestEncoding.swift */,
 			);
 			name = Protocols;
@@ -281,7 +290,10 @@
 				C2EC67D524EB98EA007FEF40 /* Requestable.swift in Sources */,
 				C2EC67AE24EB96C1007FEF40 /* AppDelegate.swift in Sources */,
 				C2EC67B824EB96C1007FEF40 /* NewsApp.xcdatamodeld in Sources */,
+				C2F3777224EDB08C0008AE52 /* URLCacheable.swift in Sources */,
+				C2F3776F24EDB0690008AE52 /* DiskURLCache.swift in Sources */,
 				C2EC67DC24EBB3B4007FEF40 /* APIServiceInterface.swift in Sources */,
+				C2F3777024EDB0690008AE52 /* RequestURLCache.swift in Sources */,
 				C2EC67F024ED13CD007FEF40 /* ArticleListRepositoryInterface.swift in Sources */,
 				C2EC67F424ED1E06007FEF40 /* APIEndpoint.swift in Sources */,
 				C2EC67E024ECFC6F007FEF40 /* URLRequest+RequestMethod.swift in Sources */,
