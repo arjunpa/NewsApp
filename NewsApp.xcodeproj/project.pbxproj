@@ -34,6 +34,9 @@
 		C2F3776F24EDB0690008AE52 /* DiskURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3776D24EDB0690008AE52 /* DiskURLCache.swift */; };
 		C2F3777024EDB0690008AE52 /* RequestURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */; };
 		C2F3777224EDB08C0008AE52 /* URLCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3777124EDB08C0008AE52 /* URLCacheable.swift */; };
+		C2F3777624EE37890008AE52 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3777524EE37890008AE52 /* ArticleListViewModel.swift */; };
+		C2F3777824EE382F0008AE52 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3777724EE382F0008AE52 /* ArticleViewModel.swift */; };
+		C2F3777A24EE3CC60008AE52 /* CacheURLResponse+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3777924EE3CC60008AE52 /* CacheURLResponse+Decodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		C2F3776D24EDB0690008AE52 /* DiskURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskURLCache.swift; sourceTree = "<group>"; };
 		C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestURLCache.swift; sourceTree = "<group>"; };
 		C2F3777124EDB08C0008AE52 /* URLCacheable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCacheable.swift; sourceTree = "<group>"; };
+		C2F3777524EE37890008AE52 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
+		C2F3777724EE382F0008AE52 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		C2F3777924EE3CC60008AE52 /* CacheURLResponse+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CacheURLResponse+Decodable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,8 @@
 		C2EC67AC24EB96C1007FEF40 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				C2F3777424EE376C0008AE52 /* View Models */,
+				C2F3777324EE375E0008AE52 /* Models */,
 				C2EC67D824EB9964007FEF40 /* Extensions */,
 				C2EC67D324EB98C7007FEF40 /* Protocols */,
 				C2EC67D224EB98AA007FEF40 /* Foundation */,
@@ -153,7 +161,6 @@
 				C2EC67E524ECFD3A007FEF40 /* RequestURLEncoding.swift */,
 				C2EC67E624ECFD3A007FEF40 /* RequestJSONEncoding.swift */,
 				C2EC67EF24ED13CD007FEF40 /* ArticleListRepositoryInterface.swift */,
-				C2EC67F124ED1497007FEF40 /* ArticleListResponse.swift */,
 				C2F3776D24EDB0690008AE52 /* DiskURLCache.swift */,
 				C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */,
 			);
@@ -176,11 +183,29 @@
 		C2EC67D824EB9964007FEF40 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C2F3777924EE3CC60008AE52 /* CacheURLResponse+Decodable.swift */,
 				C2EC67D924EB9984007FEF40 /* UITableViewCell+ReuseIdentifier.swift */,
 				C2EC67DF24ECFC6F007FEF40 /* URLRequest+RequestMethod.swift */,
 				C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C2F3777324EE375E0008AE52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2EC67F124ED1497007FEF40 /* ArticleListResponse.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C2F3777424EE376C0008AE52 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2F3777524EE37890008AE52 /* ArticleListViewModel.swift */,
+				C2F3777724EE382F0008AE52 /* ArticleViewModel.swift */,
+			);
+			name = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2EC67B224EB96C1007FEF40 /* ViewController.swift in Sources */,
+				C2F3777624EE37890008AE52 /* ArticleListViewModel.swift in Sources */,
+				C2F3777A24EE3CC60008AE52 /* CacheURLResponse+Decodable.swift in Sources */,
 				C2EC67EC24ED0D45007FEF40 /* APIService.swift in Sources */,
+				C2F3777824EE382F0008AE52 /* ArticleViewModel.swift in Sources */,
 				C2EC67EE24ED0E8B007FEF40 /* SessionContext.swift in Sources */,
 				C2EC67D524EB98EA007FEF40 /* Requestable.swift in Sources */,
 				C2EC67AE24EB96C1007FEF40 /* AppDelegate.swift in Sources */,
