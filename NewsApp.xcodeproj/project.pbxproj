@@ -150,20 +150,20 @@
 		C2EC67AC24EB96C1007FEF40 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				C20002B624EE468200295FAB /* Cells */,
-				C2F3777424EE376C0008AE52 /* View Models */,
-				C2F3777324EE375E0008AE52 /* Models */,
-				C2EC67D824EB9964007FEF40 /* Extensions */,
-				C2EC67D324EB98C7007FEF40 /* Protocols */,
-				C2EC67D224EB98AA007FEF40 /* Foundation */,
 				C2EC67AD24EB96C1007FEF40 /* AppDelegate.swift */,
-				C2EC67B124EB96C1007FEF40 /* ArticleListViewController.swift */,
 				C20002BF24EE6A8D00295FAB /* ArticleDetailWebViewController.swift */,
-				C2EC67B324EB96C1007FEF40 /* Main.storyboard */,
+				C2EC67B124EB96C1007FEF40 /* ArticleListViewController.swift */,
 				C2EC67B924EB96C2007FEF40 /* Assets.xcassets */,
-				C2EC67BB24EB96C2007FEF40 /* LaunchScreen.storyboard */,
+				C20002B624EE468200295FAB /* Cells */,
+				C2EC67D824EB9964007FEF40 /* Extensions */,
+				C2EC67D224EB98AA007FEF40 /* Foundation */,
 				C2EC67BE24EB96C2007FEF40 /* Info.plist */,
+				C2EC67BB24EB96C2007FEF40 /* LaunchScreen.storyboard */,
+				C2EC67B324EB96C1007FEF40 /* Main.storyboard */,
+				C2F3777324EE375E0008AE52 /* Models */,
 				C2EC67B624EB96C1007FEF40 /* NewsApp.xcdatamodeld */,
+				C2EC67D324EB98C7007FEF40 /* Protocols */,
+				C2F3777424EE376C0008AE52 /* View Models */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -171,8 +171,8 @@
 		C2EC67C624EB96C2007FEF40 /* NewsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				C2EC67C724EB96C2007FEF40 /* NewsAppTests.swift */,
 				C2EC67C924EB96C2007FEF40 /* Info.plist */,
+				C2EC67C724EB96C2007FEF40 /* NewsAppTests.swift */,
 			);
 			path = NewsAppTests;
 			sourceTree = "<group>";
@@ -180,16 +180,16 @@
 		C2EC67D224EB98AA007FEF40 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				C2EC67E924ECFEF9007FEF40 /* APIServiceError.swift */,
 				C2EC67F324ED1E06007FEF40 /* APIEndpoint.swift */,
-				C2EC67EB24ED0D45007FEF40 /* APIService.swift */,
 				C2EC67DD24EBB3C8007FEF40 /* APIHTTPDecodableResponse.swift */,
-				C2EC67E124ECFC97007FEF40 /* Request.swift */,
-				C2EC67E524ECFD3A007FEF40 /* RequestURLEncoding.swift */,
-				C2EC67E624ECFD3A007FEF40 /* RequestJSONEncoding.swift */,
+				C2EC67EB24ED0D45007FEF40 /* APIService.swift */,
+				C2EC67E924ECFEF9007FEF40 /* APIServiceError.swift */,
 				C2EC67EF24ED13CD007FEF40 /* ArticleListRepositoryInterface.swift */,
 				C2F3776D24EDB0690008AE52 /* DiskURLCache.swift */,
+				C2EC67E124ECFC97007FEF40 /* Request.swift */,
+				C2EC67E624ECFD3A007FEF40 /* RequestJSONEncoding.swift */,
 				C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */,
+				C2EC67E524ECFD3A007FEF40 /* RequestURLEncoding.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -197,13 +197,13 @@
 		C2EC67D324EB98C7007FEF40 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C2EC67D424EB98EA007FEF40 /* Requestable.swift */,
-				C2EC67D624EB9932007FEF40 /* URLFormable.swift */,
 				C2EC67DB24EBB3B4007FEF40 /* APIServiceInterface.swift */,
-				C2EC67ED24ED0E8B007FEF40 /* SessionContext.swift */,
-				C2F3777124EDB08C0008AE52 /* URLCacheable.swift */,
+				C2EC67D424EB98EA007FEF40 /* Requestable.swift */,
 				C2EC67E324ECFCBC007FEF40 /* RequestEncoding.swift */,
+				C2EC67ED24ED0E8B007FEF40 /* SessionContext.swift */,
 				C20002B424EE449400295FAB /* StoryboardInstantiable.swift */,
+				C2F3777124EDB08C0008AE52 /* URLCacheable.swift */,
+				C2EC67D624EB9932007FEF40 /* URLFormable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -212,11 +212,11 @@
 			isa = PBXGroup;
 			children = (
 				C2F3777924EE3CC60008AE52 /* CacheURLResponse+Decodable.swift */,
+				C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer+URLDecoding.swift */,
+				C20002BD24EE583C00295FAB /* String+DateFormats.swift */,
+				C20002B224EE442900295FAB /* UIStoryboard+StoryboardAdditions.swift */,
 				C2EC67D924EB9984007FEF40 /* UITableViewCell+ReuseIdentifier.swift */,
 				C2EC67DF24ECFC6F007FEF40 /* URLRequest+RequestMethod.swift */,
-				C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer+URLDecoding.swift */,
-				C20002B224EE442900295FAB /* UIStoryboard+StoryboardAdditions.swift */,
-				C20002BD24EE583C00295FAB /* String+DateFormats.swift */,
 				C2440C7024EE747600E30129 /* WKWebView+URLLoad.swift */,
 			);
 			name = Extensions;
@@ -233,8 +233,8 @@
 		C2F3777424EE376C0008AE52 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				C2F3777524EE37890008AE52 /* ArticleListViewModel.swift */,
 				C2440C6E24EE6F4600E30129 /* ArticleDetailViewModel.swift */,
+				C2F3777524EE37890008AE52 /* ArticleListViewModel.swift */,
 				C2F3777724EE382F0008AE52 /* ArticleViewModel.swift */,
 			);
 			name = "View Models";
