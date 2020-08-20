@@ -68,7 +68,7 @@ final class ArticleListViewModel: ArticleListViewModelInterface {
     }
     
     func detailViewModelAtIndex(_ index: Int) -> ArticleDetailViewModelInterface {
-        return ArticleDetailViewModel(article: self.articleViewModels[index].article)
+        return ArticleDetailViewModel(article: self.articleViewModels[index].article, webViewHandler: WKWebViewHandler())
     }
     
     private func dispatchResponse(_ response: ArticleListResponse) {

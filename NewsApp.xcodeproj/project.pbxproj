@@ -15,6 +15,8 @@
 		C20002C024EE6A8D00295FAB /* ArticleDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20002BF24EE6A8D00295FAB /* ArticleDetailWebViewController.swift */; };
 		C2440C6F24EE6F4600E30129 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2440C6E24EE6F4600E30129 /* ArticleDetailViewModel.swift */; };
 		C2440C7124EE747600E30129 /* WKWebView+URLLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2440C7024EE747600E30129 /* WKWebView+URLLoad.swift */; };
+		C2440C7324EE8BB900E30129 /* WKWebViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2440C7224EE8BB900E30129 /* WKWebViewHandler.swift */; };
+		C2440C7524EEF0EF00E30129 /* WebViewOfflineSupportProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2440C7424EEF0EF00E30129 /* WebViewOfflineSupportProtocol.swift */; };
 		C2EC67AE24EB96C1007FEF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67AD24EB96C1007FEF40 /* AppDelegate.swift */; };
 		C2EC67B224EB96C1007FEF40 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67B124EB96C1007FEF40 /* ArticleListViewController.swift */; };
 		C2EC67B524EB96C1007FEF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2EC67B324EB96C1007FEF40 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		C20002BF24EE6A8D00295FAB /* ArticleDetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailWebViewController.swift; sourceTree = "<group>"; };
 		C2440C6E24EE6F4600E30129 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
 		C2440C7024EE747600E30129 /* WKWebView+URLLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+URLLoad.swift"; sourceTree = "<group>"; };
+		C2440C7224EE8BB900E30129 /* WKWebViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewHandler.swift; sourceTree = "<group>"; };
+		C2440C7424EEF0EF00E30129 /* WebViewOfflineSupportProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewOfflineSupportProtocol.swift; sourceTree = "<group>"; };
 		C2EC67AA24EB96C1007FEF40 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EC67AD24EB96C1007FEF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EC67B124EB96C1007FEF40 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 				C2EC67E624ECFD3A007FEF40 /* RequestJSONEncoding.swift */,
 				C2F3776E24EDB0690008AE52 /* RequestURLCache.swift */,
 				C2EC67E524ECFD3A007FEF40 /* RequestURLEncoding.swift */,
+				C2440C7224EE8BB900E30129 /* WKWebViewHandler.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				C20002B424EE449400295FAB /* StoryboardInstantiable.swift */,
 				C2F3777124EDB08C0008AE52 /* URLCacheable.swift */,
 				C2EC67D624EB9932007FEF40 /* URLFormable.swift */,
+				C2440C7424EEF0EF00E30129 /* WebViewOfflineSupportProtocol.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				C2EC67B224EB96C1007FEF40 /* ArticleListViewController.swift in Sources */,
 				C2F3777624EE37890008AE52 /* ArticleListViewModel.swift in Sources */,
 				C20002B324EE442900295FAB /* UIStoryboard+StoryboardAdditions.swift in Sources */,
+				C2440C7524EEF0EF00E30129 /* WebViewOfflineSupportProtocol.swift in Sources */,
 				C2F3777A24EE3CC60008AE52 /* CacheURLResponse+Decodable.swift in Sources */,
 				C2EC67EC24ED0D45007FEF40 /* APIService.swift in Sources */,
 				C2F3777824EE382F0008AE52 /* ArticleViewModel.swift in Sources */,
@@ -361,6 +368,7 @@
 				C2EC67F424ED1E06007FEF40 /* APIEndpoint.swift in Sources */,
 				C20002BE24EE583C00295FAB /* String+DateFormats.swift in Sources */,
 				C2EC67E024ECFC6F007FEF40 /* URLRequest+RequestMethod.swift in Sources */,
+				C2440C7324EE8BB900E30129 /* WKWebViewHandler.swift in Sources */,
 				C2EC67E724ECFD3A007FEF40 /* RequestURLEncoding.swift in Sources */,
 				C20002B524EE449400295FAB /* StoryboardInstantiable.swift in Sources */,
 				C2440C7124EE747600E30129 /* WKWebView+URLLoad.swift in Sources */,
