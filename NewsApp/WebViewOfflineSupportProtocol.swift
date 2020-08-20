@@ -8,7 +8,9 @@
 
 import Foundation
 
+typealias CacheResponseCompletion = (Result<Bool, Error>) -> Void
 protocol WebViewOfflineSupportProtocol {
-    func cacheResponse(for cacheReequest: CacheRequestable)
+    func cacheResponse(for cacheRequest: CacheRequestable, completion: CacheResponseCompletion? )
     func cachedResponseString(for request: Requestable, completion: @escaping (Result<String?, Error>) -> Void)
+    func removeCachedResponse(for request: Requestable, completion: CacheResponseCompletion?)
 }

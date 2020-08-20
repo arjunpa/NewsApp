@@ -12,7 +12,8 @@ import WebKit
 extension WKWebView {
     
     func loadURL(url: URL) {
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.cachePolicy = .returnCacheDataElseLoad
         self.load(request)
     }
 }

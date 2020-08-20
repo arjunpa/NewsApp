@@ -126,6 +126,18 @@ final class DiskURLCache: URLCacheable {
         }
     }
     
+    func remove(forRequest request: Requestable, completion: URLCacheableStoreCompletion?) {
+        do {
+            let urlRequest = try request.asURLRequest()
+            self.concurrentQueue.async(flags: .barrier) { [weak self] in
+                self?.urlCache.removeCachedResponse(for: urlRequest)
+                completion?(.success(true))
+            }
+        } catch {
+            completion?(.failure(error))
+        }
+    }
+    
     private func cachedResponse(fromRequest request: CacheRequestable,
                                 httpResponse: HTTPURLResponse,
                                 data: Data) -> CachedURLResponse {

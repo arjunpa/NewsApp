@@ -12,7 +12,7 @@ import WebKit
 final class WKWebViewHandler: NSObject, WKNavigationDelegate, WebViewOfflineSupportProtocol {
     
     static let defaultURLCache = DiskURLCache(with: RequestURLCache(memoryCapacity: 10 * 1024 * 1024,
-                                                                    diskCapacity: 25 * 1024 * 1024,
+                                                                    diskCapacity: 100 * 1024 * 1024,
                                                                     diskPath: nil))
     
     let urlCache: URLCacheable
@@ -42,16 +42,16 @@ final class WKWebViewHandler: NSObject, WKNavigationDelegate, WebViewOfflineSupp
         }
     }
     
-    func cacheResponse(for cacheReequest: CacheRequestable) {
+    func cacheResponse(for cacheReequest: CacheRequestable, completion: CacheResponseCompletion?) {
         self.loadData(for: cacheReequest) { [weak self] result in
             switch result {
             case .success(let response):
                 self?.urlCache.store(response: response, forRequest: cacheReequest, completion: { result in
                     switch result {
                     case .success(let status):
-                        print("cache store success: \(status)")
+                        completion?(.success(status))
                     case .failure(let error):
-                        print("cache store failure: \(error)")
+                        completion?(.failure(error))
                     }
                 })
             case .failure:
@@ -79,6 +79,10 @@ final class WKWebViewHandler: NSObject, WKNavigationDelegate, WebViewOfflineSupp
         }
     }
     
+    func removeCachedResponse(for request: Requestable, completion: CacheResponseCompletion?) {
+        self.urlCache.remove(forRequest: request, completion: completion)
+    }
+    
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         guard let url = navigationAction.request.url, let httpMethod = navigationAction.request.requestMethod, !self.isHandlingCacheRequest else {
             self.isHandlingCacheRequest = false
@@ -103,8 +107,10 @@ final class WKWebViewHandler: NSObject, WKNavigationDelegate, WebViewOfflineSupp
                     webView.loadHTMLString(htmlDataString, baseURL: nil)
                 }
                 self.isHandlingCacheRequest = true
+                decisionHandler(.cancel)
             case .failure:
                 self.isHandlingCacheRequest = false
+                decisionHandler(.allow)
             }
         }
     }

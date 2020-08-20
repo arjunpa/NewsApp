@@ -79,7 +79,7 @@ extension ArticleListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController: ArticleDetailWebViewController = UIStoryboard(storyboardName: .main).instantiateViewController()
-        detailViewController.detailViewModel = self.articleListViewModel?.detailViewModelAtIndex(indexPath.row)
+        detailViewController.detailViewModel = self.articleListViewModel?.detailViewModelAtIndex(with: detailViewController, index: indexPath.row)
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

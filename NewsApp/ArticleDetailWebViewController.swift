@@ -28,7 +28,16 @@ final class ArticleDetailWebViewController: UIViewController {
     
     override func viewDidLoad() {
         self.setupViews()
+        self.setupViewBindings()
+    }
+    
+    private func setupViewBindings() {
         guard let url = self.detailViewModel?.detailURL else { return }
+        
+        self.detailViewModel?.offlineAvailability(completion: { [weak self] status in
+            self?.configureRightBarItem(with: status)
+        })
+        
         self.webView.loadURL(url: url)
     }
     
@@ -40,15 +49,32 @@ final class ArticleDetailWebViewController: UIViewController {
             self.view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: self.webView.bottomAnchor),
             self.view.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: self.webView.trailingAnchor)
         ])
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Offline",
-                                                                 style: .done,
-                                                                 target: self,
-                                                                 action: #selector(didInteractWithOfflineAction))
     }
     
-    @objc private func didInteractWithOfflineAction() {
-        self.detailViewModel?.addToOfflineStorage()
+    private func configureRightBarItem(with offlineStatus: Bool) {
+        let title = offlineStatus ? "Remove" : "Offline"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: title,
+                                                                 style: .done,
+                                                                 target: self,
+                                                                 action: #selector(didInteractWithRightButton))
+    }
+    
+    @objc private func didInteractWithRightButton() {
+        self.detailViewModel?.offlineAvailability(completion: { [weak self] status in
+            if status {
+                self?.detailViewModel?.removeFromOfflineStorage()
+            } else {
+                self?.detailViewModel?.addToOfflineStorage()
+            }
+        })
     }
 }
 
 extension ArticleDetailWebViewController: StoryboardInstantiable {}
+
+extension ArticleDetailWebViewController: ArticleDetailViewDelegate {
+    
+    func didUpdateOfflineStatus(_ status: Bool) {
+        self.configureRightBarItem(with: status)
+    }
+}
