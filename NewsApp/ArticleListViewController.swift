@@ -36,6 +36,9 @@ class ArticleListViewController: UIViewController {
     }
     
     @objc private func didInteractWithSortAction() {
+        
+        //Bug in Action Sheet produces a constraint breakage error http://openradar.appspot.com/49289931
+        
         let actionSheetPresentation = UIAlertController(title: "Sort",
                                                         message: "Sort articles either by descending or ascending.",
                                                         preferredStyle: .actionSheet)
