@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArticleListViewController: UIViewController {
+final class ArticleListViewController: UIViewController {
     
     var articleListViewModel: ArticleListViewModelInterface?
     
@@ -75,7 +75,14 @@ extension ArticleListViewController: UITableViewDataSource {
     }
 }
 
-extension ArticleListViewController: UITableViewDelegate {}
+extension ArticleListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController: ArticleDetailWebViewController = UIStoryboard(storyboardName: .main).instantiateViewController()
+        detailViewController.detailViewModel = self.articleListViewModel?.detailViewModelAtIndex(indexPath.row)
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+}
 
 extension ArticleListViewController: ArticleListViewUpdater {
     

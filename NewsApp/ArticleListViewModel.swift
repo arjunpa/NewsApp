@@ -18,6 +18,7 @@ protocol ArticleListViewModelInterface {
     func itemAtIndex(_ index: Int) -> ArticleViewModelInterface
     func fetchArticles()
     func sortArticlesBy(_ order: ArticleListViewSortOrder)
+    func detailViewModelAtIndex(_ index: Int) -> ArticleDetailViewModelInterface
 }
 
 
@@ -64,6 +65,10 @@ final class ArticleListViewModel: ArticleListViewModelInterface {
     
     func itemAtIndex(_ index: Int) -> ArticleViewModelInterface {
         return self.articleViewModels[index]
+    }
+    
+    func detailViewModelAtIndex(_ index: Int) -> ArticleDetailViewModelInterface {
+        return ArticleDetailViewModel(article: self.articleViewModels[index].article)
     }
     
     private func dispatchResponse(_ response: ArticleListResponse) {

@@ -12,6 +12,9 @@
 		C20002BB24EE46D100295FAB /* ArticleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20002B924EE46D100295FAB /* ArticleListTableViewCell.swift */; };
 		C20002BC24EE46D100295FAB /* ArticleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C20002BA24EE46D100295FAB /* ArticleListTableViewCell.xib */; };
 		C20002BE24EE583C00295FAB /* String+DateFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20002BD24EE583C00295FAB /* String+DateFormats.swift */; };
+		C20002C024EE6A8D00295FAB /* ArticleDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20002BF24EE6A8D00295FAB /* ArticleDetailWebViewController.swift */; };
+		C2440C6F24EE6F4600E30129 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2440C6E24EE6F4600E30129 /* ArticleDetailViewModel.swift */; };
+		C2440C7124EE747600E30129 /* WKWebView+URLLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2440C7024EE747600E30129 /* WKWebView+URLLoad.swift */; };
 		C2EC67AE24EB96C1007FEF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67AD24EB96C1007FEF40 /* AppDelegate.swift */; };
 		C2EC67B224EB96C1007FEF40 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC67B124EB96C1007FEF40 /* ArticleListViewController.swift */; };
 		C2EC67B524EB96C1007FEF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2EC67B324EB96C1007FEF40 /* Main.storyboard */; };
@@ -60,6 +63,9 @@
 		C20002B924EE46D100295FAB /* ArticleListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewCell.swift; sourceTree = "<group>"; };
 		C20002BA24EE46D100295FAB /* ArticleListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleListTableViewCell.xib; sourceTree = "<group>"; };
 		C20002BD24EE583C00295FAB /* String+DateFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormats.swift"; sourceTree = "<group>"; };
+		C20002BF24EE6A8D00295FAB /* ArticleDetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailWebViewController.swift; sourceTree = "<group>"; };
+		C2440C6E24EE6F4600E30129 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
+		C2440C7024EE747600E30129 /* WKWebView+URLLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+URLLoad.swift"; sourceTree = "<group>"; };
 		C2EC67AA24EB96C1007FEF40 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EC67AD24EB96C1007FEF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EC67B124EB96C1007FEF40 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 				C2EC67D224EB98AA007FEF40 /* Foundation */,
 				C2EC67AD24EB96C1007FEF40 /* AppDelegate.swift */,
 				C2EC67B124EB96C1007FEF40 /* ArticleListViewController.swift */,
+				C20002BF24EE6A8D00295FAB /* ArticleDetailWebViewController.swift */,
 				C2EC67B324EB96C1007FEF40 /* Main.storyboard */,
 				C2EC67B924EB96C2007FEF40 /* Assets.xcassets */,
 				C2EC67BB24EB96C2007FEF40 /* LaunchScreen.storyboard */,
@@ -210,6 +217,7 @@
 				C2EC67FD24ED6DE2007FEF40 /* KeyedDecodingContainer+URLDecoding.swift */,
 				C20002B224EE442900295FAB /* UIStoryboard+StoryboardAdditions.swift */,
 				C20002BD24EE583C00295FAB /* String+DateFormats.swift */,
+				C2440C7024EE747600E30129 /* WKWebView+URLLoad.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F3777524EE37890008AE52 /* ArticleListViewModel.swift */,
+				C2440C6E24EE6F4600E30129 /* ArticleDetailViewModel.swift */,
 				C2F3777724EE382F0008AE52 /* ArticleViewModel.swift */,
 			);
 			name = "View Models";
@@ -343,6 +352,7 @@
 				C2EC67D524EB98EA007FEF40 /* Requestable.swift in Sources */,
 				C2EC67AE24EB96C1007FEF40 /* AppDelegate.swift in Sources */,
 				C2EC67B824EB96C1007FEF40 /* NewsApp.xcdatamodeld in Sources */,
+				C20002C024EE6A8D00295FAB /* ArticleDetailWebViewController.swift in Sources */,
 				C2F3777224EDB08C0008AE52 /* URLCacheable.swift in Sources */,
 				C2F3776F24EDB0690008AE52 /* DiskURLCache.swift in Sources */,
 				C2EC67DC24EBB3B4007FEF40 /* APIServiceInterface.swift in Sources */,
@@ -353,7 +363,9 @@
 				C2EC67E024ECFC6F007FEF40 /* URLRequest+RequestMethod.swift in Sources */,
 				C2EC67E724ECFD3A007FEF40 /* RequestURLEncoding.swift in Sources */,
 				C20002B524EE449400295FAB /* StoryboardInstantiable.swift in Sources */,
+				C2440C7124EE747600E30129 /* WKWebView+URLLoad.swift in Sources */,
 				C2EC67DE24EBB3C8007FEF40 /* APIHTTPDecodableResponse.swift in Sources */,
+				C2440C6F24EE6F4600E30129 /* ArticleDetailViewModel.swift in Sources */,
 				C20002BB24EE46D100295FAB /* ArticleListTableViewCell.swift in Sources */,
 				C2EC67E424ECFCBC007FEF40 /* RequestEncoding.swift in Sources */,
 				C2EC67EA24ECFEF9007FEF40 /* APIServiceError.swift in Sources */,

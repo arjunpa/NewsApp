@@ -38,5 +38,39 @@
             </objects>
             <point key="canvasLocation" x="77" y="90"/>
         </scene>
+        <!--Article Detail Web View Controller-->
+        <scene sceneID="COb-yB-CCI">
+            <objects>
+                <viewController storyboardIdentifier="ArticleDetailWebViewController" id="oE1-BE-hn3" customClass="ArticleDetailWebViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="38O-sP-7Md">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bw1-Uz-CHm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bw1-Uz-CHm" firstAttribute="leading" secondItem="Zuz-OI-o3u" secondAttribute="leading" id="Tqw-ua-TZA"/>
+                            <constraint firstItem="Bw1-Uz-CHm" firstAttribute="top" secondItem="Zuz-OI-o3u" secondAttribute="top" id="Trh-rE-m2i"/>
+                            <constraint firstItem="Bw1-Uz-CHm" firstAttribute="trailing" secondItem="Zuz-OI-o3u" secondAttribute="trailing" id="ZIM-Ak-LL7"/>
+                            <constraint firstItem="Bw1-Uz-CHm" firstAttribute="bottom" secondItem="Zuz-OI-o3u" secondAttribute="bottom" id="n8j-JQ-ULT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zuz-OI-o3u"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Bw1-Uz-CHm" id="gMd-MX-cMU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adY-KR-38G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="89.732142857142847"/>
+        </scene>
     </scenes>
 </document>
