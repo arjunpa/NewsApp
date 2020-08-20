@@ -42,6 +42,7 @@ class ArticleListViewController: UIViewController {
         let actionSheetPresentation = UIAlertController(title: "Sort",
                                                         message: "Sort articles either by descending or ascending.",
                                                         preferredStyle: .actionSheet)
+        
         actionSheetPresentation.addAction(UIAlertAction(title: "Descending", style: .default, handler: { [weak self] _ in
             self?.articleListViewModel?.sortArticlesBy(.descending)
         }))
